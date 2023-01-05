@@ -12,6 +12,8 @@
 *.out
 
 proto/*.go
+go.sum
+.vscode
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
