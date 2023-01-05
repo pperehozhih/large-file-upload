@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = ".;proto";
+
+package proto;
+
+service UploadService {
+  rpc UploadFile (UploadRequest) returns (UploadResponse) {}
+  rpc GetFile (UploadRequest) returns (UploadResponse) {}
+}
+
+message UploadRequest {
+  string name = 1;
+  bytes chunk = 2;
+}
+
+message UploadResponse {
+  string name = 1;
+  bytes chunk = 2;
+}
